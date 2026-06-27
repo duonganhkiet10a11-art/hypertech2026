@@ -1,0 +1,580 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+.top-banner {
+    width: 100%;
+    height: 220px;
+    background-image: url('../images/txt.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.main-header {
+    background: #333;
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+    gap: 15px;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    text-decoration: none;
+    color: white;
+}
+
+.menu-btn {
+    background: #c4000f;
+    border: none;
+    color: white;
+    padding: 8px 12px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.search-box {
+    flex: 1;
+    display: flex;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 8px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+}
+
+.search-box button {
+    padding: 8px 12px;
+    border: none;
+    background: white;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+}
+
+.header-right {
+    display: flex;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.header-right .item {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.header-right .item:hover {
+    color: #ffd700;
+}
+
+/* ================= SUB MENU ================= */
+
+.sub-menu {
+    background: #e9e9e9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sub-menu a {
+    padding: 14px 25px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.sub-menu a:hover {
+    color: #c4000f;
+}
+
+/* ================= MAIN LAYOUT ================= */
+
+.main-layout {
+    display: flex;
+    gap: 20px;
+    max-width: 1400px;
+    margin: 15px auto;
+    align-items: flex-start;/* khoảng cách vừa phải */
+}
+
+/* ================= SIDEBAR ================= */
+
+.sidebar {
+    width: 260px;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 10px 0;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.category-list {
+    list-style: none;       /* bỏ dấu chấm */
+    margin: 0;
+    padding: 0;
+}
+
+.category-list li {
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.category-list li:last-child {
+    border-bottom: none;
+}
+
+.category-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    transition: 0.25s ease;
+}
+
+.category-list a:hover {
+    background: #fff2f2;
+    color: #c4000f;
+    padding-left: 24px;  /* hiệu ứng trượt */
+}
+
+.arrow {
+    font-size: 18px;
+    color: #999;
+    transition: 0.2s;
+}
+
+.category-list a:hover .arrow {
+    color: #c4000f;
+}
+
+/* ================= CONTENT ================= */
+
+.content {
+    flex: 1;
+}
+
+/* ================= HOME WRAPPER ================= */
+
+.home-wrapper {
+    display: flex;
+    gap: 15px;
+    align-items: stretch;
+}
+
+/* ===== CỘT TRÁI ===== */
+
+.home-left {
+    flex: 1.2;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Banner lớn */
+.banner-main {
+    width: 100%;
+    height: 320px;   /* giảm xuống cho vừa mắt */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+/* 2 banner nhỏ */
+.banner-row {
+    display: flex;
+    gap: 15px;
+}
+
+.banner-row a {
+    flex: 1;
+}
+
+.banner-small {
+    width: 100%;
+    height: 150px;   /* cân đối với banner lớn */
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+/* ===== CỘT GIỮA - KEYBOARD ===== */
+
+.home-middle {
+    width: 300px;    /* nhỏ lại cho cân */
+    flex-shrink: 0;
+    display: flex;
+}
+
+.banner-keyboard {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: 0.3s ease;
+}
+
+
+/* ===== RTX NẰM CẠNH KEYBOARD ===== */
+
+.rtx-side {
+    width: 110px;
+    flex-shrink: 0;
+    position: sticky;
+    top: 20px;
+    align-self: flex-start;
+    margin-left: 25px; /* chỉnh số này theo ý bạn */
+}
+
+.rtx-side img {
+    width: 100%;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* ===== ACCOUNT DROPDOWN ===== */
+
+.account {
+    position: relative;
+    cursor: pointer;
+}
+
+/* Box dropdown */
+.account-dropdown {
+    position: absolute;
+    top: calc(100% + 12px);
+    right: 0;
+    width: 320px;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    padding: 15px;
+
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(8px);
+    transition: 0.25s ease;
+
+    z-index: 2000;
+}
+
+/* Hover hiện */
+.account:hover .account-dropdown {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+/* Top section */
+.account-top {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.account-top i {
+    font-size: 18px;
+}
+
+/* Buttons row */
+.account-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.account-buttons a {
+    flex: 1;
+    text-align: center;
+    padding: 10px;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* Login button */
+.btn-login {
+    background: #000;
+    color: #fff;
+}
+
+/* Register button */
+.btn-register {
+    border: 1px solid #000;
+    color: #000;
+    background: #fff;
+}
+
+/* Divider line */
+.account-divider {
+    margin: 15px 0;
+    height: 1px;
+    background: #ddd;
+}
+
+/* Help section */
+.account-help {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.account-help:hover {
+    color: #c4000f;
+}
+.account-dropdown {
+    box-shadow: 0 15px 35px rgba(0,0,0,0.18);
+}
+
+.account-dropdown::before {
+    content: "";
+    position: absolute;
+    top: -8px;
+    right: 25px;
+    width: 14px;
+    height: 14px;
+    background: #f5f5f5;
+    transform: rotate(45deg);
+    box-shadow: -2px -2px 5px rgba(0,0,0,0.05);
+}
+
+/* ===== LOGIN MODAL CLEAN VERSION ===== */
+
+.login-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+    backdrop-filter: blur(3px);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.login-modal.show {
+    display: flex;
+}
+
+/* BOX */
+.login-box {
+    background: #fff;
+    width: 480px;
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.15);
+    animation: fadeIn 0.25s ease;
+}
+
+/* HEADER */
+.login-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.login-header h2 {
+    font-size: 19px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.close-btn {
+    font-size: 22px;
+    cursor: pointer;
+    color: #777;
+    transition: 0.2s;
+}
+
+.close-btn:hover {
+    color: #c4000f;
+}
+
+/* INPUT */
+.login-box input {
+    width: 100%;
+    padding: 14px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    transition: 0.2s;
+}
+
+.login-box input:focus {
+    border-color: #c4000f;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(196,0,15,0.08);
+}
+
+/* FORGOT */
+.login-box a {
+    font-size: 13px;
+    color: #666;
+    text-decoration: none;
+}
+
+.login-box a:hover {
+    color: #c4000f;
+}
+
+/* BUTTON */
+.login-submit {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    background: #e60012;
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.login-submit:hover {
+    background: #c4000f;
+    transform: translateY(-2px);
+}
+
+/* DIVIDER */
+.divider {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin: 25px 0;
+    color: #999;
+    font-size: 13px;
+}
+
+.divider::before,
+.divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: #eee;
+}
+
+/* ===== SOCIAL LOGIN ===== */
+.social-login {
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.social-login button {
+    flex: 1;
+    padding: 13px;
+    border-radius: 10px;
+    border: none;
+    font-weight: 600;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    transition: 0.2s ease;
+    color: #fff;
+}
+
+/* GOOGLE - ĐỎ */
+.google-btn {
+    background-color: #db4437;
+}
+
+.google-btn:hover {
+    background-color: #c23321;
+}
+
+/* FACEBOOK - XANH */
+.facebook-btn {
+    background-color: #4267B2;
+}
+
+.facebook-btn:hover {
+    background-color: #365899;
+}
+
+/* ICON */
+.social-login i {
+    font-size: 16px;
+}
+
+
+.login-modal{
+    display:none;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.5);
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.login-modal.show{
+    display:flex;
+}
+
+/* ===== BANNER SLIDER ===== */
+
+.banner-slider{
+    position:relative;
+    width:100%;
+    overflow:hidden;
+}
+
+.slide{
+    position:absolute;
+    width:100%;
+    opacity:0;
+    transition: opacity 0.8s ease;
+}
+
+.slide.active{
+    opacity:1;
+    position:relative;
+}
+
+/* thanh ngang */
+
+.slider-nav{
+    position:absolute;
+    bottom:10px;
+    left:50%;
+    transform:translateX(-50%);
+    display:flex;
+    gap:8px;
+}
+
+.nav-dot{
+    width:40px;
+    height:5px;
+    background:#ddd;
+    border-radius:4px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.nav-dot.active{
+    background:#e60012;
+}

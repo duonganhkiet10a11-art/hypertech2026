@@ -1,0 +1,74 @@
+body{
+    margin:0;
+    font-family: Arial, sans-serif;
+}
+
+/* layout */
+
+.admin-container{
+    display:flex;
+}
+
+/* sidebar */
+
+.sidebar{
+    width:220px;
+    height:100vh;
+    background:#2f3542;
+    color:white;
+}
+
+.logo{
+    text-align:center;
+    padding:20px;
+}
+
+.sidebar ul{
+    list-style:none;
+    padding:0;
+}
+
+.sidebar li{
+    padding:15px 20px;
+}
+
+.sidebar a{
+    color:white;
+    text-decoration:none;
+    display:block;
+}
+
+.sidebar li:hover{
+    background:#ff4757;
+}
+
+/* main */
+
+.main{
+    flex:1;
+    background:#f1f2f6;
+    padding:40px;
+}
+
+/* dashboard */
+
+.dashboard{
+    margin-top:20px;
+}
+
+/* card */
+
+.card{
+    display:block;
+    width:220px;
+    padding:30px;
+    border-radius:8px;
+    color:white;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:scale(1.05);
+}
+

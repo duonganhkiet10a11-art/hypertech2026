@@ -1,0 +1,315 @@
+  /* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
+
+
+/* banner */
+.banner {
+    width: 100%;
+    overflow: visible;
+}
+
+.banner img {
+    width: 100%;
+    display: block;
+    transform: scale(1.02);
+}
+
+.banner {
+    position: relative;
+}
+
+.banner::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 120px;
+
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, black 100%);
+}
+
+/* ===== MENU ===== */
+.category-wrapper {
+    position: relative;
+    background: black;
+    transition: all 0.3s ease;
+}
+
+/* khi scroll tới thì dính */
+.category-wrapper.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+.category-container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.category-item {
+    width: 230px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.category-item:hover {
+    transform: translateY(-5px);
+}
+
+/* ========================= */
+/* BEST SELLER SECTION */
+/* ========================= */
+
+.best-seller-section {
+    background: black;
+    padding-top: 30px;
+    border-top: 1px solid #fff;
+}
+
+/* tiêu đề */
+.best-seller-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.best-seller-container img {
+    max-width: 100%;
+}
+
+/* background + sản phẩm */
+.best-seller-content {
+    background-image:
+        linear-gradient(to bottom, black 0%, transparent 150px),
+        url('../images/gearvn-man-hinh-background-1.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px 0;
+
+    min-height: 500px;
+}
+/* container sản phẩm */
+.product-container{
+    width:1200px;
+    margin:auto;
+
+    display:grid;
+    grid-template-columns:repeat(6,1fr);
+    gap:20px;
+}
+
+/* card */
+.product-card{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+
+    box-shadow:0 2px 10px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+/* hover */
+.product-card:hover{
+    transform:translateY(-5px);
+}
+
+/* ảnh */
+.product-img img{
+    width:100%;
+    height:140px;
+    object-fit:contain;
+}
+/* tên */
+.product-name{
+    font-size:14px;
+    margin:10px 0;
+    min-height:40px;
+}
+
+/* giá cũ */
+.old-price{
+    text-decoration:line-through;
+    color:gray;
+    font-size:13px;
+}
+/* dòng giá */
+.price-row{
+    margin-top:5px;
+}
+
+/* giá mới */
+.new-price{
+    color:red;
+    font-weight:bold;
+}
+
+/* giảm giá */
+.discount{
+    background:red;
+    color:white;
+    padding:2px 6px;
+    font-size:12px;
+    border-radius:4px;
+    margin-left:5px;
+}
+
+/* nút */
+.buy-btn{
+    margin-top:10px;
+    padding:8px 12px;
+
+    border:none;
+    background:#ff4d4d;
+    color:white;
+
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.buy-btn:hover{
+    background:#e60000;
+}
+
+/* ========================= */
+/* 24 INCH SECTION */
+/* ========================= */
+
+.inch24-section {
+    background: black;
+    padding-top: 30px;
+}
+
+/* tiêu đề */
+.inch24-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inch24-container img {
+    max-width: 100%;
+}
+
+/* background + sản phẩm */
+.inch24-content {
+    background-image:
+        linear-gradient(to bottom, black 0%, transparent 150px),
+        url('../images/gearvn-man-hinh-background-2.jpg'); /* 👈 background mới */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px 0;
+    min-height: 500px;
+}
+
+/* ========================= */
+/* 27 INCH SECTION */
+/* ========================= */
+
+.inch27-section {
+    background: black;
+    padding-top: 30px;
+}
+
+/* tiêu đề */
+.inch27-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.inch27-container img {
+    max-width: 100%;
+}
+
+/* background + sản phẩm */
+.inch27-content {
+    background-image:
+        linear-gradient(to bottom, black 0%, transparent 150px),
+        url('../images/gearvn-man-hinh-background-1.jpg'); /* 👈 background mới */
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px 0;
+    min-height: 500px;
+}
+
+/* ========================= */
+/* OLED SECTION */
+/* ========================= */
+
+.oled-section {
+    background: black;
+    padding-top: 30px;
+}
+
+/* tiêu đề */
+.oled-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.oled-container img {
+    max-width: 100%;
+}
+
+/* background + sản phẩm */
+.oled-content {
+    background-image:
+        linear-gradient(to bottom, black 0%, transparent 150px),
+        url('../images/gearvn-man-hinh-background-2.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 40px 0;
+    min-height: 500px;
+}
+
+/* ===== STICKY MENU ===== */
+
+
+/* scroll mượt */
+html {
+    scroll-behavior: smooth;
+}
+
+/* tránh bị che đầu */
+#bestSeller,
+#inch24,
+#inch27,
+#oled {
+    scroll-margin-top: 120px;
+}
+
